@@ -13,5 +13,6 @@ alias mpv-a='mpv --no-video --alsa-resample=yes --hwdec=auto'
 alias cdparanoia='cdparanoia -BzX'
 alias vim='nvim'
 alias scrot='scrot -q 100'
+alias gcc='gcc -Wall -Wextra'
 
 PS1=' \W \$ '
