@@ -15,4 +15,7 @@ alias vim='nvim'
 alias scrot='scrot -q 100'
 alias gcc='gcc -Wall -Wextra'
 
-PS1=' \W \$ '
+#PS1=' \W \$ '
+PS1=" \[\033[36m\]\W \[\033[32m\]\$ \[\033[37m\]"
+
+test -r "~/.dir_colors" && eval $(dircolors ~/.dir_colors)
