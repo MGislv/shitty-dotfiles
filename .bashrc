@@ -16,7 +16,7 @@ alias scrot='scrot -q 100'
 alias gcc='gcc -lm -Wall -Wextra'
 
 # Arch only
-# Clean packages cache & remove orphans
+# Clear packages cache & remove orphans
 alias clpkc='paccache -rk1 && paccache -ruk0 && sudo pacman -Qtdq | sudo pacman -Rns -'
 
 #PS1=' \W \$ '
