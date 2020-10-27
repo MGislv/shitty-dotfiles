@@ -1,3 +1,5 @@
+" file path: ~/.config/nvim/init.vim
+
 call plug#begin('~/.config/nvim/plugged')
 
 Plug 'itchyny/lightline.vim'
