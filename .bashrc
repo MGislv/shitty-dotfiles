@@ -14,6 +14,8 @@ alias cdparanoia='cdparanoia -BzX'
 alias vim='nvim'
 alias scrot='scrot -q 100'
 alias gcc='gcc -lm -Wall -Wextra'
+# tar.xz ultra compression [tarxzu 'archive.tar.xz' file1 file2 file3..]
+alias tarxzu="tar --use-compress-program='xz -9e -T0' -cvf"
 
 # Arch only
 # Clear packages cache & remove orphans (requires 'pacman-contrib')
