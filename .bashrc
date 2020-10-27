@@ -13,7 +13,11 @@ alias mpv-a='mpv --no-video --alsa-resample=yes --hwdec=auto'
 alias cdparanoia='cdparanoia -BzX'
 alias vim='nvim'
 alias scrot='scrot -q 100'
-alias gcc='gcc -Wall -Wextra'
+alias gcc='gcc -lm -Wall -Wextra'
+
+# Arch only
+# Clean packages cache & remove orphans
+alias clpkc='paccache -rk1 && paccache -ruk0 && sudo pacman -Qtdq | sudo pacman -Rns -'
 
 #PS1=' \W \$ '
 PS1=" \[\033[36m\]\W \[\033[32m\]\$ \[\033[37m\]"
