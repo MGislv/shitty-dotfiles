@@ -6,8 +6,10 @@
 [[ $- != *i* ]] && return
 
 alias ls='ls -A --color=auto'
+alias lsh='ls -Ahl --color=auto'
 alias grep='grep --color=auto'
 alias clo='clear'
+alias cx='clear'
 alias ..='cd ..'
 alias mpv-a='mpv --no-video --alsa-resample=yes --hwdec=auto'
 alias cdparanoia='cdparanoia -BzX'
@@ -19,6 +21,7 @@ alias gcc='gcc -lm -Wall -Wextra'
 alias tarxzu="tar --use-compress-program='xz -9e -T0' -cvf"
 
 # Arch only
+alias upd='sudo pacman -Syu'
 # Clear packages cache & remove orphans (requires 'pacman-contrib')
 alias clpkc='paccache -rk1 && paccache -ruk0 && sudo pacman -Qtdq | sudo pacman -Rns -'
 
