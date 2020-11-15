@@ -27,6 +27,7 @@ alias tarxzu="tar --use-compress-program='xz -9e -T0' -cvf"
 
 # Arch only
 alias upd='sudo pacman -Syu'
+alias updm='sudo reflector --latest 100 --sort rate --save /etc/pacman.d/mirrorlist'
 # Clear packages cache & remove orphans (requires 'pacman-contrib')
 alias clpkc='paccache -rk1 && paccache -ruk0 && sudo pacman -Qtdq | sudo pacman -Rns -'
 
