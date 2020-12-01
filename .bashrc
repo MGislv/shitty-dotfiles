@@ -29,7 +29,7 @@ alias tarxzu="tar --use-compress-program='xz -9e -T0' -cvf"
 alias upd='sudo pacman -Syu'
 alias updm='sudo reflector --latest 100 --sort rate --save /etc/pacman.d/mirrorlist'
 # Clear packages cache & remove orphans (requires 'pacman-contrib')
-alias clpkc='paccache -rk1 && paccache -ruk0 && sudo pacman -Qtdq | sudo pacman -Rns -'
+# alias clpkc='paccache -rk1 && paccache -ruk0 && sudo pacman -Qtdq | sudo pacman -Rns -'
 
 #PS1=' \W \$ '
 PS1=" \[\033[36m\]\W \[\033[32m\]\$ \[\033[37m\]"
