@@ -1,0 +1,2 @@
+# https://github.com/StevenBlack/hosts
+python3 updateHostsFile.py -e fakenews gambling porn -kgsc -o outputdir/
