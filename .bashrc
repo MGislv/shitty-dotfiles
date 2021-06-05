@@ -10,6 +10,7 @@ alias vim=nvim
 alias vi=nvim
 alias scrot='scrot -q 100'
 alias gc='gcc -lm -O2 -Wall -Wextra'
+alias g+='g++ -lm -O2 -Wall -Wextra'
 alias noscreenblanking='xset s off -dpms'
 alias youlistformat='youtube-dl --list-formats'
 
