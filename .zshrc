@@ -8,6 +8,9 @@ _comp_options+=(globdots)
 
 setopt COMPLETE_ALIASES
 setopt autocd
+setopt CORRECT
+setopt CORRECT_ALL
+CORRECT_IGNORE="[_|.]*"
 
 # Autocompletion cache
 zstyle ':completion:*' use-cache on
@@ -33,10 +36,10 @@ SAVEHIST=$HISTSIZE
 setopt hist_ignore_all_dups
 
 # Prompt theme
-PROMPT='%F{#bf616a}[%f%F{#ebcb8b}%n%f%F{#8fbcbb}@%F{#81a1c1}%m%f %F{#d08770}%B%~%b%f%F{#bf616a}]%f$ '
+PROMPT='%F{#bf616a}[%f%F{#ebcb8b}%n%f%F{#8fbcbb}@%F{#81a1c1}%m%f %F{#d08770}%B%~%b%f%F{#bf616a}]%f$%f '
 
-zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
-test -r "~/.dir_colors" && eval $(dircolors ~/.dir_colors)
+eval $(dircolors ~/.dir_colors)
+zstyle ':completion:*:default' list-colors "${(s.:.)LS_COLORS}"
 
 # Bindings
 bindkey -e
@@ -45,8 +48,7 @@ bindkey "^[[B" history-beginning-search-forward
 
 # Aliases
 alias ls='ls -A --color=auto'
-alias la='ls -Ahl --color=auto'
-alias l='ls -hl --color=auto'
+alias l='ls -Ahl --color=auto'
 alias grep='grep --color=auto'
 alias vim=nvim
 alias vi=nvim
@@ -77,4 +79,4 @@ alias chrooted='CHROOT=$HOME/chroot'
 
 # export
 export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=gasp'
-PATH=/home/gabriele/additional_path/:$PATH
+PATH="$HOME/.bin/:$PATH"
