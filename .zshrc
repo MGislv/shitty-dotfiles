@@ -36,7 +36,9 @@ SAVEHIST=$HISTSIZE
 setopt hist_ignore_all_dups
 
 # Prompt theme
-PROMPT='%F{#bf616a}[%f%F{#ebcb8b}%n%f%F{#8fbcbb}@%F{#81a1c1}%m%f %F{#d08770}%B%~%b%f%F{#bf616a}]%f$%f '
+#PROMPT='%F{#bf616a}[%f%F{#ebcb8b}%n%f%F{#8fbcbb}@%F{#81a1c1}%m%f %F{#d08770}%B%~%b%f%F{#bf616a}]%f$%f '
+precmd() { print -rP "%F{#ebcb8b}%n%f%F{#8fbcbb}@%F{#81a1c1}%m%f %F{#d08770}%B%~%b%f" }
+PROMPT=' > '
 
 eval $(dircolors ~/.dir_colors)
 zstyle ':completion:*:default' list-colors "${(s.:.)LS_COLORS}"
@@ -80,3 +82,4 @@ alias chrooted='CHROOT=$HOME/chroot'
 # export
 export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=gasp'
 PATH="$HOME/.bin/:$PATH"
+export LESSHISTFILE="$HOME"/.cache/less/history
